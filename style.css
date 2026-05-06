@@ -506,3 +506,38 @@ body {
   .hero-stats { gap: 16px; }
   .stat-num { font-size: 1.8rem; }
 }
+
+/* Real team photos */
+.team-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  border-radius: 50%;
+}
+
+/* Tech grid expanded */
+.tech-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 16px; }
+
+/* Done presentation cards */
+.done-card { border-color: var(--green-soft); }
+.done-card .pres-done-thumb { background: linear-gradient(135deg, var(--green-mid), var(--green-deep)); }
+.done-badge { background: var(--green-pale); color: var(--green-deep); }
+
+/* Supervisors section */
+.supervisors-section { margin-top: 60px; }
+.sup-section-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; color: var(--text-dark); text-align: center; margin-bottom: 12px; }
+.sup-section-desc { text-align: center; color: var(--text-light); font-size: 0.95rem; max-width: 680px; margin: 0 auto 36px; line-height: 1.7; }
+.sup-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.sup-card { background: linear-gradient(135deg, #f0faf4, #fff); border: 1px solid var(--green-soft); border-radius: var(--radius); padding: 32px; display: flex; gap: 24px; box-shadow: var(--shadow-sm); transition: var(--transition); }
+.sup-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.sup-photo-wrap { position: relative; flex-shrink: 0; }
+.sup-photo { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; border: 3px solid var(--green-soft); }
+.sup-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.sup-role-badge { position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); background: var(--green-mid); color: var(--white); font-size: 0.68rem; font-weight: 700; padding: 3px 12px; border-radius: var(--radius-full); white-space: nowrap; }
+.co-badge { background: var(--green-deep); }
+.sup-card-info { flex: 1; }
+.sup-card-info h4 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.sup-title-label { display: inline-block; background: var(--green-pale); color: var(--green-deep); font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-full); margin-bottom: 10px; }
+.sup-dept, .sup-inst, .sup-group { font-size: 0.82rem; color: var(--text-light); margin-bottom: 4px; }
+.sup-inst { font-weight: 600; color: var(--text-mid); }
+.sup-thank { margin-top: 12px; font-size: 0.82rem; color: var(--text-light); font-style: italic; line-height: 1.6; border-left: 3px solid var(--green-light); padding-left: 12px; }
+@media (max-width: 768px) { .sup-cards { grid-template-columns: 1fr; } .sup-card { flex-direction: column; align-items: center; text-align: center; } .tech-grid { grid-template-columns: repeat(2,1fr); } }
